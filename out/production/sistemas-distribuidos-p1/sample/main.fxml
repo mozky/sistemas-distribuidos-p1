@@ -46,12 +46,12 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="plusHour1" mnemonicParsing="false" onAction="#handlePlusHour" text="+1" />
                         <Label text="Hour" />
-                        <Button mnemonicParsing="false" text="-1" />
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="minusHour1" mnemonicParsing="false" onAction="#handleMinusHour" text="-1" />
+                        <Button fx:id="plusMinute1" mnemonicParsing="false" onAction="#handlePlusMinute" text="+1" />
                         <Label text="Minute" />
-                        <Button mnemonicParsing="false" text="-1" />
+                        <Button fx:id="minusMinute1" mnemonicParsing="false" onAction="#handleMinusMinute" text="-1" />
                      </children>
                   </HBox>
                   <Slider fx:id="sliderClock1" blockIncrement="0.5" majorTickUnit="5.0" max="10.0" min="0.1" minorTickCount="1" prefHeight="16.0" prefWidth="88.0" showTickLabels="true" showTickMarks="true" value="1.0">

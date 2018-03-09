@@ -1,10 +1,13 @@
 package sample;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class CustomClock extends Clock {
     private ZonedDateTime dateTime;
     private Double tickSpeed;
+    private int hoursOffset = 0;
+    private int minutesOffset = 0;
 
     public CustomClock() {
        dateTime = ZonedDateTime.now();
@@ -40,15 +43,31 @@ public class CustomClock extends Clock {
         this.tickSpeed = speed;
     }
 
+    public void plusHour() {
+        this.hoursOffset++;
+    }
+
+    public void minusHour() {
+        this.hoursOffset--;
+    }
+
+    public void plusMinute() {
+        this.minutesOffset++;
+    }
+
+    public void minusMinute() {
+        this.minutesOffset--;
+    }
+
     public LocalTime getTime() {
         ZonedDateTime now = ZonedDateTime.now();
         long nowSeconds = now.toInstant().getEpochSecond();
-        long beginSeconds = dateTime.toInstant().getEpochSecond();
+        long beginSeconds = this.dateTime.toInstant().getEpochSecond();
 
         // Difference between the starting point of this clock and 'now'
         long delta = nowSeconds - beginSeconds;
 
-        ZonedDateTime newDateTime = dateTime.plusSeconds(Math.round(delta * tickSpeed));
+        ZonedDateTime newDateTime = this.dateTime.plusHours(hoursOffset).plusMinutes(minutesOffset).plusSeconds(Math.round(delta * tickSpeed));
 
         return LocalTime.of(newDateTime.getHour(), newDateTime.getMinute(), newDateTime.getSecond());
     }

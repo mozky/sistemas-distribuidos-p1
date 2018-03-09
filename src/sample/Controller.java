@@ -2,7 +2,9 @@ package sample;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.util.Duration;
@@ -10,6 +12,8 @@ import javafx.util.Duration;
 import java.net.URL;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
+
+import static java.lang.Thread.sleep;
 
 public class Controller {
     private Timeline clockTicker = new Timeline(new KeyFrame(Duration.seconds(1), actionEvent -> changeClockLabels()));
@@ -67,8 +71,64 @@ public class Controller {
         changeClockLabels();
     }
 
+    @FXML
+    private void handlePlusHour(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        node.getId();
+        switch(node.getId()) {
+            case "plusHour1":
+                this.clock1.plusHour();
+                changeClockLabels();
+                break;
+            default:
+                return;
+        }
+    }
+
+    @FXML
+    private void handleMinusHour(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        node.getId();
+        switch(node.getId()) {
+            case "minusHour1":
+                this.clock1.minusHour();
+                changeClockLabels();
+                break;
+            default:
+                return;
+        }
+    }
+
+    @FXML
+    private void handlePlusMinute(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        node.getId();
+        switch(node.getId()) {
+            case "plusMinute1":
+                this.clock1.plusMinute();
+                changeClockLabels();
+                break;
+            default:
+                return;
+        }
+    }
+
+    @FXML
+    private void handleMinusMinute(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        node.getId();
+        switch(node.getId()) {
+            case "minusMinute1":
+                this.clock1.minusMinute();
+                changeClockLabels();
+                break;
+            default:
+                return;
+        }
+    }
+
     private void changeClockLabels() {
-        clockLabel1.setText(clock1.getTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+        clockLabel1.setText(this.clock1.getTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
         clockLabel2.setText(clock2.getTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
         clockLabel3.setText(clock3.getTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
         clockLabel4.setText(clock4.getTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
