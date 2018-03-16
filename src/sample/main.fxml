@@ -65,12 +65,12 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="plusHour2" mnemonicParsing="false" onAction="#handlePlusHour" text="+1" />
                         <Label text="Hour" />
-                        <Button mnemonicParsing="false" text="-1" />
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="minusHour2" mnemonicParsing="false" onAction="#handleMinusHour" text="-1" />
+                        <Button fx:id="plusMinute2" mnemonicParsing="false" onAction="#handlePlusMinute" text="+1" />
                         <Label text="Minute" />
-                        <Button mnemonicParsing="false" text="-1" />
+                        <Button fx:id="minusMinute2" mnemonicParsing="false" onAction="#handleMinusMinute" text="-1" />
                      </children>
                   </HBox>
                   <Slider fx:id="sliderClock2" blockIncrement="0.5" majorTickUnit="5.0" max="10.0" min="0.1" minorTickCount="1" prefHeight="16.0" prefWidth="88.0" showTickLabels="true" showTickMarks="true" value="1.0">
@@ -115,12 +115,12 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="plusHour4" mnemonicParsing="false" onAction="#handlePlusHour" text="+1" />
                         <Label text="Hour" />
-                        <Button mnemonicParsing="false" text="-1" />
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="minusHour4" mnemonicParsing="false" onAction="#handleMinusHour" text="-1" />
+                        <Button fx:id="plusMinute4" mnemonicParsing="false" onAction="#handlePlusMinute" text="+1" />
                         <Label text="Minute" />
-                        <Button mnemonicParsing="false" text="-1" />
+                        <Button fx:id="minusMinute4" mnemonicParsing="false" onAction="#handleMinusMinute" text="-1" />
                      </children>
                   </HBox>
                   <Slider fx:id="sliderClock3" blockIncrement="0.5" majorTickUnit="5.0" max="10.0" min="0.1" minorTickCount="1" prefHeight="16.0" prefWidth="88.0" showTickLabels="true" showTickMarks="true" value="1.0">
@@ -134,12 +134,12 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="plusHour3" mnemonicParsing="false" onAction="#handlePlusHour" text="+1" />
                         <Label text="Hour" />
-                        <Button mnemonicParsing="false" text="-1" />
-                        <Button mnemonicParsing="false" text="+1" />
+                        <Button fx:id="minusHour3" mnemonicParsing="false" onAction="#handleMinusHour" text="-1" />
+                        <Button fx:id="plusMinute3" mnemonicParsing="false" onAction="#handlePlusMinute" text="+1" />
                         <Label text="Minute" />
-                        <Button mnemonicParsing="false" text="-1" />
+                        <Button fx:id="minusMinute3" mnemonicParsing="false" onAction="#handleMinusMinute" text="-1" />
                      </children>
                   </HBox>
                   <Slider fx:id="sliderClock4" blockIncrement="0.5" majorTickUnit="5.0" max="10.0" min="0.1" minorTickCount="1" prefHeight="16.0" prefWidth="88.0" showTickLabels="true" showTickMarks="true" value="1.0">
@@ -153,9 +153,6 @@
       </GridPane>
       <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" spacing="30.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#refreshClocks" text="Refresh" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" text="Restart" />
-            <Button mnemonicParsing="false" text="Close app" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="Javier Suarez 2018" />
          </children>
       </HBox>

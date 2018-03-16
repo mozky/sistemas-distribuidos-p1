@@ -80,6 +80,16 @@ public class Controller {
                 this.clock1.plusHour();
                 changeClockLabels();
                 break;
+            case "plusHour2":
+                this.clock2.plusHour();
+                changeClockLabels();
+                break;
+            case "plusHour3":
+                this.clock3.plusHour();
+                changeClockLabels();
+            case "plusHour4":
+                this.clock4.plusHour();
+                changeClockLabels();
             default:
                 return;
         }
@@ -92,6 +102,18 @@ public class Controller {
         switch(node.getId()) {
             case "minusHour1":
                 this.clock1.minusHour();
+                changeClockLabels();
+                break;
+            case "minusHour2":
+                this.clock2.minusHour();
+                changeClockLabels();
+                break;
+            case "minusHour3":
+                this.clock3.minusHour();
+                changeClockLabels();
+                break;
+            case "minusHour4":
+                this.clock4.minusHour();
                 changeClockLabels();
                 break;
             default:
@@ -108,6 +130,18 @@ public class Controller {
                 this.clock1.plusMinute();
                 changeClockLabels();
                 break;
+            case "plusMinute2":
+                this.clock2.plusMinute();
+                changeClockLabels();
+                break;
+            case "plusMinute3":
+                this.clock3.plusMinute();
+                changeClockLabels();
+                break;
+            case "plusMinute4":
+                this.clock4.plusMinute();
+                changeClockLabels();
+                break;
             default:
                 return;
         }
@@ -120,6 +154,18 @@ public class Controller {
         switch(node.getId()) {
             case "minusMinute1":
                 this.clock1.minusMinute();
+                changeClockLabels();
+                break;
+            case "minusMinute2":
+                this.clock2.minusMinute();
+                changeClockLabels();
+                break;
+            case "minusMinute3":
+                this.clock3.minusMinute();
+                changeClockLabels();
+                break;
+            case "minusMinute4":
+                this.clock4.minusMinute();
                 changeClockLabels();
                 break;
             default:
